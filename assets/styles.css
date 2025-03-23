@@ -16,14 +16,13 @@ body {
     display: flex;
     flex-direction: column;
     background: hsl(0, 0%, 100%);
-    margin: 5vh auto 0;
-    height: 85vh;
-    min-height: 550px;
-    width: 43vw;
-    min-width: 400px;
+    margin: 3vh auto 0;
+    height: 91vh;
+    width: 41vw;
     border-radius: 10px;
     box-shadow: 1px 1px 16px hsla(219, 14%, 63%, 0.6);
-    padding: 24px 40px;
+    padding: 16px 40px 6px 40px;
+    overflow: auto;
 }
 
 .notifications-header {
@@ -31,7 +30,7 @@ body {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    padding: 0 0 10px 0; /* Align with container padding */
+    padding: 0 0 6px 0;
 }
 
 .notifications-count p {
@@ -60,16 +59,20 @@ body {
 .notifications-read p {
     font-weight: 500;
     color: hsl(219, 12%, 42%);
+}
+
+.notifications-read p:hover {
+    color: hsl(219, 85%, 26%);
     cursor: pointer;
 }
 
 .notifications-element {
     display: flex;
     flex-direction: row;
-    align-items: center;
-    width: 100%;
-    margin-bottom: 10px;
-    padding: 10px 0;
+    margin-bottom: 8px;
+    padding: 9px 12px;
+    border-radius: 8px;
+    width: calc(100% - 20px);
 }
 
 .notifications-element img {
@@ -78,16 +81,43 @@ body {
     margin-right: 15px;
 }
 
+.img-chess {
+    margin-left: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.img-chess:hover {
+    border-radius: 8px;
+    box-shadow: 0px 0px 1px 2px hsl(205, 33%, 90%);
+}
+
 .element-body {
     flex: 1;
 }
 
-.user, .target {
+.user {
     font-weight: 800;
     color: hsl(224, 21%, 14%);
 }
 
+.user:hover {
+    color: hsl(219, 85%, 26%);
+    cursor: pointer;
+}
+
+.target {
+    font-weight: 800;
+    color: hsl(219, 12%, 42%);
+}
+
+.target:hover {
+    color: hsl(219, 85%, 26%);
+    cursor: pointer;
+}
+
 .action {
+    font-weight: 500;
     color: hsl(219, 12%, 42%);
 }
 
@@ -104,8 +134,41 @@ body {
 
 .unread {
     background-color: hsl(210, 60%, 98%);
-    border-radius: 8px;
-    padding: 10px 12px;
-    width: calc(100% - 20px);
 
+}
+
+.message {
+    margin-top: 10px;
+    padding: 15px;
+    border: 1px solid hsl(205, 33%, 90%);
+    border-radius: 8px;
+    background-color: hsl(0, 0%, 100%);
+    color: hsl(219, 12%, 42%);
+    font-size: 0.95em;
+    line-height: 1.5;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-weight: 500;
+}
+
+.message:hover {
+    background-color: hsl(211, 68%, 94%);
+}
+
+.dot {
+    content: "";
+    width: 8px;
+    height: 8px;
+    margin-left: 3px;
+    margin-bottom: 1px;
+    display: inline-block;
+    border-radius: 50%;
+    background-color: rgba(255,0,0,0.7);
+}
+
+@media screen  and (max-width: 720px) {
+    .container {
+        min-width: 375px;
+    }
+    
 }
