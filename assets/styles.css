@@ -66,6 +66,10 @@ body {
     cursor: pointer;
 }
 
+.notifications-read p:focus {
+    color: hsl(219, 85%, 26%);
+}
+
 .notifications-element {
     display: flex;
     flex-direction: row;
@@ -87,7 +91,7 @@ body {
     transition: background-color 0.3s ease;
 }
 
-.img-chess:hover {
+.img-chess:hover, .img-chess:focus {
     border-radius: 8px;
     box-shadow: 0px 0px 1px 2px hsl(205, 33%, 90%);
 }
@@ -101,7 +105,7 @@ body {
     color: hsl(224, 21%, 14%);
 }
 
-.user:hover {
+.user:hover, .user:focus {
     color: hsl(219, 85%, 26%);
     cursor: pointer;
 }
@@ -111,7 +115,7 @@ body {
     color: hsl(219, 12%, 42%);
 }
 
-.target:hover {
+.target:hover, .target:focus {
     color: hsl(219, 85%, 26%);
     cursor: pointer;
 }
@@ -151,7 +155,7 @@ body {
     font-weight: 500;
 }
 
-.message:hover {
+.message:hover, .message:focus {
     background-color: hsl(211, 68%, 94%);
 }
 
